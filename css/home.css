@@ -1,0 +1,36 @@
+
+body {
+    --bs-body-font-family: var(--bs-font-monospace);
+    --primary-color: #111e29; 
+    --bs-body-bg: #FBF0F6;
+  }
+  
+
+.header{
+    z-index:2; 
+   
+}
+
+.bg-animation{
+   position: absolute;
+   top:50%; 
+   left:50%; 
+   min-width: 100%;
+   min-height: 100%;
+   width: auto; 
+   height: auto; 
+   transform: translateX(-50%) translateY(-50%);
+
+}
+
+.bg-overlay{
+    
+}
+
+.green{
+    position: relative; 
+    height: 100vh;
+    background-color: var(--primary-color);
+    overflow: hidden;
+
+}
