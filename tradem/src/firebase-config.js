@@ -1,9 +1,7 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
-import { getAnalytics } from "firebase/analytics";
-import dotenv from 'dotenv'
-dotenv.config();
-
+// import { getAnalytics } from "firebase/analytics";
+import { getDatabase, ref, set } from "firebase/database";
 
 //firbase configuration
 const firebaseConfig = {
@@ -18,4 +16,27 @@ const firebaseConfig = {
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
-const analytics = getAnalytics(app);
+const db = getDatabase(app);
+const reference = ref(db, "Users/" + 3);
+
+function writeUserData(
+  
+  description,
+ 
+) {
+  
+
+  set(reference, {
+  
+    Description: description, 
+    
+  });
+
+}
+
+
+writeUserData('Coffee' )
+
+// const analytics = getAnalytics(app);
+
+export default db;
